@@ -1,10 +1,41 @@
 /* Reset and base styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+    }
   
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-text p {
+      font-size: 1rem;
+    }
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .logo img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+  }
+  
+
   body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #fff;
@@ -22,11 +53,7 @@
     border-bottom: 1px solid #ddd;
   }
   
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #36c;
-  }
+  
   
   nav ul {
     display: flex;
@@ -46,30 +73,43 @@
   
   /* Hero Section */
   .hero {
+    background-image: url("images/010.jpg"); /* הנתיב לתמונה שלך */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, #d3cce3, #e9e4f0);
-    padding: 3rem 2rem;
-    flex-wrap: wrap;
+    padding: 0 4rem;
+    color: white;
+    position: relative;
   }
   
-  .hero-text h1 {
-    font-size: 2.5rem;
-    color: #5b2c6f;
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* שכבה כהה על התמונה */
+    z-index: 1;
   }
   
-  .hero-text p {
-    margin-top: 1rem;
-    color: #333;
-    max-width: 500px;
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
   }
   
-  .hero-image img {
-    max-width: 400px;
-    border-radius: 10px;
-    margin-top: 1rem;
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
+  
+  .hero p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  
   
   /* About Section */
   .about {
@@ -85,62 +125,78 @@
   /* Products Section */
   .products {
     padding: 2rem;
-    background-color: #f9f9f9;
   }
   
   .products h2 {
-    color: #5b2c6f;
-    margin-bottom: 1rem;
+    color: #4b2473;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: left;
   }
   
   .product-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
   }
   
   .product-card {
-    background: white;
-    border-radius: 10px;
+    background-color: #f4e9fc;
+    border-radius: 15px;
     padding: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
   }
   
   .product-card img {
     width: 100%;
-    border-radius: 8px;
+    height: auto;
+    border-radius: 10px;
   }
   
   .product-card h3 {
-    margin-top: 1rem;
-    color: #5b2c6f;
+    margin: 1rem 0 0.5rem;
+    color: #4b2473;
+    font-size: 1.1rem;
+  }
+  
+  .product-card p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 1rem;
   }
   
   .price-cart {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
   }
   
   .price-cart span {
     font-weight: bold;
-    color: #444;
+    font-size: 1rem;
+    color: #222;
   }
   
   .price-cart button {
-    background: #5b2c6f;
+    background-color: #5b2c6f;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 0.9rem;
   }
   
   .price-cart button:hover {
-    background: #472560;
+    background-color: #3d1e4d;
   }
+  
   
   /* Footer */
   footer {
