@@ -15,7 +15,7 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Our Bikes</a></li>
+        <li><a href="our-bikes.html">Our Bikes</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
@@ -48,8 +48,12 @@
   <section class="Bikes">
     <h2>MT Series</h2>
     <div class="product-list">
-      <div class="product-card">
-        <img src="images\03.jpg" alt="Yamaha Mt 03" />
+      <div class="product-card mt-03">
+        <div class="card-top">
+          <span class="badge">NEW</span>
+          <span class="wishlist" onclick="toggleHeart(this)">♡</span>
+        </div>
+        <img src="images/03.jpg" alt="Yamaha Mt 03" />
         <h3>Yamaha MT-03</h3>
         <p>Lightweight and agile, perfect for city riding with a sporty edge.</p>
         <div class="price-cart">
@@ -57,7 +61,12 @@
           <button>Add to cart 🛒</button>
         </div>
       </div>
-      <div class="product-card">
+      
+      <div class="product-card mt-07">
+        <div class="card-top">
+          <span class="badge">NEW</span>
+          <span class="wishlist" onclick="toggleHeart(this)">♡</span>
+        </div>
         <img src="images\07.jpg" alt="Yamaha Mt 07" />
         <h3>Yamaha MT-07</h3>
         <p>Iconic torque-rich twin-cylinder engine for fun, fast riding.</p>
@@ -66,23 +75,33 @@
           <button>Add to cart 🛒</button>
         </div>
       </div>
-      <div class="product-card">
+      <div class="product-card mt-09">
+        <div class="card-top">
+          <span class="badge">Powerful</span>
+          <span class="wishlist" onclick="toggleHeart(this)">♡</span>
+        </div>
         <img src="images\09.jpg" alt="Yamaha Mt 09" />
         <h3>Yamaha MT-09</h3>
-        <p>Triple-cylinder masterpiece combining power, control, and tech.</p>
+        <p>Iconic torque-rich twin-cylinder engine for fun, fast riding.</p>
         <div class="price-cart">
-          <span>$60,000.00</span>
+          <span>$65,000.00</span>
           <button>Add to cart 🛒</button>
         </div>
       </div>
-      <div class="product-card">
-        <img src="images\09sp.jpg" alt="Yamaha Mt 09 SP" />
+      <div class="product-card mt-09 SP">
+        <div class="card-top">
+          <span class="badge">SuperPower</span>
+          <span class="wishlist" onclick="toggleHeart(this)">♡</span>
+
+        </div>
+        <img src="images\09sp.jpg" alt="Yamaha Mt 09" />
         <h3>Yamaha MT-09 SP</h3>
-        <p>Premium performance with upgraded suspension and race styling.</p>
+        <p>Iconic torque-rich twin-cylinder engine for fun, fast riding.</p>
         <div class="price-cart">
           <span>$75,000.00</span>
           <button>Add to cart 🛒</button>
         </div>
+      </div>
       </div>
     </div>
   </section>
@@ -97,9 +116,10 @@
     </div>
     <div class="footer-right">
       <p>FOLLOW US</p>
-      <ul>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Instagram</a></li>
+      <ul class="social-icons">
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
       </ul>
     </div>
     <div class="footer-copy">© 2024 Yamaha</div>
@@ -107,3 +127,14 @@
 
 </body>
 </html>
+
+
+<script>
+  function toggleHeart(el) {
+    el.classList.toggle('active');
+    el.textContent = el.classList.contains('active') ? '♥' : '♡';
+  }
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
