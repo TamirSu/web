@@ -312,12 +312,16 @@
   align-items: center;
   justify-content: center;
   height: 30px; 
-  min-width: 60px; /
+  min-width: 60px; 
   text-align: center;
   box-sizing: border-box;
 }
 
 
+nav a.active {
+  font-weight: bold;
+  color: #5b2c6f;
+}
 
 
   /* === Bike Gallery (Page 2 Section 1) === */
@@ -332,6 +336,8 @@
   gap: 2rem;
   flex-wrap: wrap;
 }
+
+
 
 .bike-images img {
   border: 3px solid #5b2c6f;
