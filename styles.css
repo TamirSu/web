@@ -32,6 +32,13 @@
     width: 80px;
     object-fit: contain;
   }
+
+  .logo-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #c00; /* or #333, or your brand color */
+    font-family: 'Segoe UI', sans-serif;
+  }
   
 
   body {
